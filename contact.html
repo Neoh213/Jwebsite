@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="assets//css/style.css">
+</head>
+<body>
+
+<div class = "navbar">
+  <ul class="topnav">
+  <li><a class = "logoLink" href = "index.html"><img class = "logo" src = "logo.jpg"  height="40" width="150"></a></li>
+  <li class="right"><a href="contact.html">Contact</a></li>
+  <li class="right"><a href="about.html">About</a></li>
+  <li class="right"><a href="industries.html">Industries</a></li>
+</ul>
+</div>
+<br>
+<br>
+<h1 style = "color:white; text-shadow: 1px 1px 1px #000000;">Send Us A Message<h2>
+
+<div class = "contactForm">
+<form action="/action_page.php">
+  First name:<br>
+  <input type="text" value="Mickey"><br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse"><br>
+  E-mail:<br>
+ <input type="text" name="email"> <br>
+ <label for="subject">Comments</label><br>
+<textarea id="subject" name="subject" placeholder="" style="height:200px"></textarea><br>
+  <input type="submit" value="Submit">
+</form>
+
+</div>
+
+<br>
+<h1 style = "color:white; text-shadow: 1px 1px 1px #000000;" >Phone Number: <a class = "phoneNumber" style = "color:white" href="tel:1-562-867-5309">000-000-0000</a><h2>
+
+
+
+
+
+<div class="footer">
+  <p>Footer</p>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>
